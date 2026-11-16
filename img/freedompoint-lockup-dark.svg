@@ -1,0 +1,7 @@
+<svg viewBox="0 0 500 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FreedomPoint">
+  <g transform="translate(0,5)">
+    <rect width="90" height="90" rx="20" fill="#242822" stroke="#3A3F37"/>
+    <path d="M 17 62 L 38 31 L 48 44 L 69 22 L 73 62 Z" fill="#A3BFA9"/>
+  </g>
+  <text x="110" y="60" font-family="-apple-system, 'SF Pro Display', Helvetica, Arial, sans-serif" font-size="34" font-weight="600" fill="#F2F1EC">Freedom<tspan fill="#A3BFA9">Point</tspan></text>
+</svg>
