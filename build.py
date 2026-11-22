@@ -9,7 +9,7 @@ import pathlib
 
 ROOT = pathlib.Path(__file__).parent
 SITE = "https://freedompoint.app"
-EMAIL = "support@freedompoint.app"
+EMAIL = "FreedomPointApp@gmail.com"
 # Replace with the real App Store link when the app is live; while it is None the buttons say "coming soon".
 APP_STORE_URL = None
 UPDATED = {"en": "November 16, 2026", "es": "16 de noviembre de 2026"}
