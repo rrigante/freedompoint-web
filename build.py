@@ -12,7 +12,7 @@ SITE = "https://freedompoint.app"
 EMAIL = "FreedomPointApp@gmail.com"
 # Replace with the real App Store link when the app is live; while it is None the buttons say "coming soon".
 APP_STORE_URL = None
-UPDATED = {"en": "November 16, 2026", "es": "16 de noviembre de 2026"}
+UPDATED = {"en": "November 23, 2026", "es": "23 de noviembre de 2026"}
 
 # Page paths per language: (index, privacy, support)
 PATHS = {
@@ -274,6 +274,9 @@ PRIVACY = {
             ("Quotes and exchange rates",
              ["To show prices, FreedomPoint requests data from Yahoo Finance. Each request contains the ticker symbol (for example a stock or fund symbol) or a currency pair (for example EURUSD) and, like any internet request, reaches Yahoo with your device’s IP address.",
               "No amounts, quantities, names or account information are sent. Yahoo handles those requests under its own privacy policy, and FreedomPoint does not receive or store it. Prices can be delayed or unavailable."]),
+            ("Plan assumptions (public file)",
+             ["The savings plan uses long-term return estimates published by J.P. Morgan Asset Management. To keep them current, FreedomPoint downloads a public file from freedompoint.app/assumptions/v1.json at most once a week. It is a plain download: the request contains nothing about you or your portfolio and, like any internet request, reaches the host of this website (GitHub Pages) with your device’s IP address. The developer does not receive or store these requests.",
+              "If the download fails, the app keeps using the figures built into it. Every figure, with the publications behind it and how it was calculated, is shown in the app under “Where these numbers come from”."]),
             ("AI features (optional)",
              ["AI features run only if you pick a provider (Anthropic or Google Gemini) in Settings and add your own API key. Requests go from your device straight to that provider; they do not pass through any server of ours. Your use is governed by the provider’s own terms and privacy policy, and billed by them.",
               "What each feature sends:"]),
@@ -323,6 +326,9 @@ PRIVACY = {
             ("Cotizaciones y tipos de cambio",
              ["Para mostrar precios, FreedomPoint solicita datos a Yahoo Finance. Cada solicitud contiene el símbolo del ticker (por ejemplo el de una acción o un fondo) o un par de monedas (por ejemplo EURUSD) y, como cualquier solicitud a internet, llega a Yahoo con la dirección IP de tu dispositivo.",
               "No se envían montos, cantidades, nombres ni información de cuentas. Yahoo trata esas solicitudes según su propia política de privacidad, y FreedomPoint no la recibe ni la guarda. Los precios pueden llegar con retraso o no estar disponibles."]),
+            ("Supuestos del plan (archivo público)",
+             ["El plan de ahorro usa estimaciones de rendimiento a largo plazo que publica J.P. Morgan Asset Management. Para mantenerlas al día, FreedomPoint descarga un archivo público desde freedompoint.app/assumptions/v1.json como máximo una vez por semana. Es una descarga simple: la solicitud no contiene nada sobre ti ni sobre tu portafolio y, como cualquier solicitud de internet, llega al servidor que aloja este sitio (GitHub Pages) con la dirección IP de tu dispositivo. El desarrollador no recibe ni guarda esas solicitudes.",
+              "Si la descarga falla, la app sigue usando los valores incluidos en ella. Cada cifra, con las publicaciones en las que se basa y cómo se calculó, se muestra en la app en “De dónde salen estos números”."]),
             ("Funciones de IA (opcionales)",
              ["Las funciones de IA solo operan si eliges un proveedor (Anthropic o Google Gemini) en Ajustes y agregas tu propia clave de API. Las solicitudes van de tu dispositivo directo a ese proveedor; no pasan por ningún servidor nuestro. Tu uso se rige por los términos y la política de privacidad del proveedor, y él te lo cobra.",
               "Qué envía cada función:"]),

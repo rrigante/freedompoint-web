@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "version": 2,
+  "reviewedOn": "2026-11-23",
+  "methodology": {
+    "es": "Cada rendimiento esperado es la proyección a 10 años que publica J.P. Morgan Asset Management en su estudio anual de supuestos de mercado de largo plazo (Long-Term Capital Market Assumptions), en dólares y sin descontar inflación (nominal). Usamos una sola fuente para que sea fácil de seguir y de comprobar: cada número es el que figura en esa publicación, sin cuentas intermedias. Se redondea a 0,1 punto.\n\nLa caída en una crisis no es una proyección: es la peor caída histórica, de pico a valle, de cada tipo de inversión, con su propia fuente. El plan la usa para decidir cuántas acciones puede tener según los años que faltan.\n\nLa publicación se revisa cada año cuando J.P. Morgan saca la nueva edición, y el archivo se actualiza (cada fuente muestra su fecha). Los fondos que sugiere el plan (VOO, BND y otros) son ejemplos de fondos grandes y diversificados, no una recomendación personal.",
+    "en": "Each expected return is the 10-year projection that J.P. Morgan Asset Management publishes in its annual Long-Term Capital Market Assumptions study, in US dollars and before inflation is deducted (nominal). We use a single source so it is easy to follow and to check: each number is the one printed in that publication, with no intermediate calculations. It is rounded to 0.1 points.\n\nThe loss in a crisis isn't a projection: it's the worst historical peak-to-trough fall of each kind of investment, with its own source. The plan uses it to decide how many stocks it can hold given the years left.\n\nThe publication is reviewed every year when J.P. Morgan releases the new edition, and the file is updated (each source shows its date). The funds the plan suggests (VOO, BND and others) are examples of large, diversified funds, not a personal recommendation."
+  },
+  "classes": {
+    "stocks": {
+      "expectedReturn": {
+        "value": 0.075,
+        "rule": {
+          "es": "Proyección de J.P. Morgan para acciones globales.",
+          "en": "J.P. Morgan's projection for global equities."
+        },
+        "sources": [
+          {
+            "publisher": "J.P. Morgan Asset Management",
+            "title": "2027 Long-Term Capital Market Assumptions",
+            "publishedOn": "2026-10",
+            "asOf": "2026-09-30",
+            "url": "https://am.jpmorgan.com/content/dam/jpm-am-aem/global/en/insights/portfolio-insights/ltcma/noindex/ltcma-2027-report.pdf",
+            "scope": {
+              "es": "Acciones globales (AC World Equity): retorno compuesto a 10–15 años, nominal, en dólares.",
+              "en": "Global equities (AC World Equity): compound return over 10–15 years, nominal, in US dollars."
+            },
+            "figure": 0.075,
+            "note": {
+              "es": "Página 68, cuadro «U.S. dollar assumptions».",
+              "en": "Page 68, table «U.S. dollar assumptions»."
+            },
+            "used": 0.075
+          }
+        ]
+      },
+      "stressDrop": {
+        "value": 0.568,
+        "event": {
+          "es": "Crisis financiera de 2008: S&P 500 (nivel del índice, sin dividendos), del pico del 9 de octubre de 2007 (1.565,15) al piso del 9 de marzo de 2009 (676,53).",
+          "en": "2008 financial crisis: S&P 500 (index level, without dividends), from the October 9, 2007 peak (1,565.15) to the March 9, 2009 trough (676.53)."
+        },
+        "source": {
+          "publisher": "Yardeni Research",
+          "title": "Bull & Bear Markets (Table 3)",
+          "url": "https://archive.yardeni.com/pub/sp500corrbeartables.pdf",
+          "scope": {
+            "es": "Caída de pico a valle: −56,8%.",
+            "en": "Peak-to-trough fall: −56.8%."
+          },
+          "figure": 0.568,
+          "publishedOn": "2022-10",
+          "used": 0.568
+        }
+      }
+    },
+    "realEstate": {
+      "expectedReturn": {
+        "value": 0.082,
+        "rule": {
+          "es": "Proyección de J.P. Morgan para inmuebles cotizados (REITs).",
+          "en": "J.P. Morgan's projection for listed real estate (REITs)."
+        },
+        "sources": [
+          {
+            "publisher": "J.P. Morgan Asset Management",
+            "title": "2027 Long-Term Capital Market Assumptions",
+            "publishedOn": "2026-10",
+            "asOf": "2026-09-30",
+            "url": "https://am.jpmorgan.com/content/dam/jpm-am-aem/global/en/insights/portfolio-insights/ltcma/noindex/ltcma-2027-report.pdf",
+            "scope": {
+              "es": "REITs de EE.UU. (U.S. REITs): retorno compuesto a 10–15 años, nominal, en dólares.",
+              "en": "US REITs (U.S. REITs): compound return over 10–15 years, nominal, in US dollars."
+            },
+            "figure": 0.082,
+            "note": {
+              "es": "Página 68. Es una proyección con apalancamiento y neta de costos.",
+              "en": "Page 68. It is a leveraged projection, net of fees."
+            },
+            "used": 0.082
+          }
+        ]
+      },
+      "stressDrop": {
+        "value": 0.731,
+        "event": {
+          "es": "Crisis de 2008: FTSE Nareit All Equity REITs (retorno total), de febrero de 2007 a marzo de 2009. Es una cifra derivada de dos datos de Nareit: el índice subió 205% desde el piso y quedó 18% por debajo de su pico, es decir 0,82 ÷ 3,05 − 1 = −73,1%.",
+          "en": "2008 crisis: FTSE Nareit All Equity REITs (total return), from February 2007 to March 2009. It is derived from two Nareit figures: the index rose 205% from its trough and was still 18% below its peak, that is 0.82 ÷ 3.05 − 1 = −73.1%."
+        },
+        "source": {
+          "publisher": "Nareit",
+          "title": "REIT Industry Media Update, April 2011",
+          "url": "https://www.reit.com/sites/default/files/portals/0/PDF/NAREITApril2011MediaUpdate.pdf",
+          "scope": {
+            "es": "Caída de pico a valle (derivada): −73,1%.",
+            "en": "Peak-to-trough fall (derived): −73.1%."
+          },
+          "figure": 0.731,
+          "publishedOn": "2011-04-04",
+          "used": 0.731
+        }
+      }
+    },
+    "gold": {
+      "expectedReturn": {
+        "value": 0.055,
+        "rule": {
+          "es": "Proyección de J.P. Morgan para el oro.",
+          "en": "J.P. Morgan's projection for gold."
+        },
+        "sources": [
+          {
+            "publisher": "J.P. Morgan Asset Management",
+            "title": "2027 Long-Term Capital Market Assumptions",
+            "publishedOn": "2026-10",
+            "asOf": "2026-09-30",
+            "url": "https://am.jpmorgan.com/content/dam/jpm-am-aem/global/en/insights/portfolio-insights/ltcma/noindex/ltcma-2027-report.pdf",
+            "scope": {
+              "es": "Oro (Gold): retorno compuesto a 10–15 años, nominal, en dólares.",
+              "en": "Gold (Gold): compound return over 10–15 years, nominal, in US dollars."
+            },
+            "figure": 0.055,
+            "note": {
+              "es": "Página 68.",
+              "en": "Page 68."
+            },
+            "used": 0.055
+          }
+        ]
+      },
+      "stressDrop": {
+        "value": 0.295,
+        "event": {
+          "es": "Crisis de 2008: oro (precio LBMA de la tarde), del 17 de marzo de 2008 (US$1.011,25) al 24 de octubre de 2008 (US$712,50).",
+          "en": "2008 crisis: gold (LBMA PM price), from March 17, 2008 (US$1,011.25) to October 24, 2008 (US$712.50)."
+        },
+        "source": {
+          "publisher": "LBMA",
+          "title": "LBMA Gold Price PM",
+          "url": "https://www.lbma.org.uk/prices-and-data/precious-metal-prices",
+          "scope": {
+            "es": "Caída de pico a valle: −29,5%.",
+            "en": "Peak-to-trough fall: −29.5%."
+          },
+          "figure": 0.295,
+          "used": 0.295
+        }
+      }
+    },
+    "bonds": {
+      "expectedReturn": {
+        "value": 0.056,
+        "rule": {
+          "es": "Proyección de J.P. Morgan para bonos de EE.UU. de grado de inversión.",
+          "en": "J.P. Morgan's projection for US investment-grade bonds."
+        },
+        "sources": [
+          {
+            "publisher": "J.P. Morgan Asset Management",
+            "title": "2027 Long-Term Capital Market Assumptions",
+            "publishedOn": "2026-10",
+            "asOf": "2026-09-30",
+            "url": "https://am.jpmorgan.com/content/dam/jpm-am-aem/global/en/insights/portfolio-insights/ltcma/noindex/ltcma-2027-report.pdf",
+            "scope": {
+              "es": "Bonos agregados de EE.UU. (U.S. Aggregate Bonds): retorno compuesto a 10–15 años, nominal, en dólares.",
+              "en": "US aggregate bonds (U.S. Aggregate Bonds): compound return over 10–15 years, nominal, in US dollars."
+            },
+            "figure": 0.056,
+            "note": {
+              "es": "Página 68.",
+              "en": "Page 68."
+            },
+            "used": 0.056
+          }
+        ]
+      },
+      "stressDrop": {
+        "value": 0.161,
+        "event": {
+          "es": "2020–2022: bonos agregados de EE.UU. (retorno total, Bloomberg US Aggregate), de agosto de 2020 a septiembre de 2022: −16,09% al 30 de septiembre de 2022, con la caída todavía en curso. Según fuentes secundarias, el piso de octubre de 2022 fue algo más profundo (cerca de −17%).",
+          "en": "2020–2022: US aggregate bonds (total return, Bloomberg US Aggregate), from August 2020 to September 2022: −16.09% as of September 30, 2022, with the fall still under way. According to secondary sources, the October 2022 low was somewhat deeper (around −17%)."
+        },
+        "source": {
+          "publisher": "AndCo Consulting (con datos de Bloomberg)",
+          "title": "Bloomberg US Aggregate Bond Index drawdown, 30 sep 2022",
+          "url": "https://www.washoecounty.gov/humanresources/board_committees/deferred_compensation/2022/11-09-2022%20Item%2014%202022-09-30%20Bloomberg%20Barclays%20US%20Bond%20Index%20Drawdown.pdf",
+          "scope": {
+            "es": "Caída acumulada a septiembre de 2022: −16,1%.",
+            "en": "Cumulative fall as of September 2022: −16.1%."
+          },
+          "figure": 0.161,
+          "publishedOn": "2022-11",
+          "used": 0.161
+        }
+      }
+    },
+    "cash": {
+      "expectedReturn": {
+        "value": 0.032,
+        "rule": {
+          "es": "Proyección de J.P. Morgan para efectivo (letras del Tesoro de EE.UU.).",
+          "en": "J.P. Morgan's projection for cash (US Treasury bills)."
+        },
+        "sources": [
+          {
+            "publisher": "J.P. Morgan Asset Management",
+            "title": "2027 Long-Term Capital Market Assumptions",
+            "publishedOn": "2026-10",
+            "asOf": "2026-09-30",
+            "url": "https://am.jpmorgan.com/content/dam/jpm-am-aem/global/en/insights/portfolio-insights/ltcma/noindex/ltcma-2027-report.pdf",
+            "scope": {
+              "es": "Efectivo de EE.UU. (U.S. Cash): retorno compuesto a 10–15 años, nominal, en dólares.",
+              "en": "US cash (U.S. Cash): compound return over 10–15 years, nominal, in US dollars."
+            },
+            "figure": 0.032,
+            "note": {
+              "es": "Página 68.",
+              "en": "Page 68."
+            },
+            "used": 0.032
+          }
+        ]
+      },
+      "stressDrop": {
+        "value": 0.0,
+        "event": {
+          "es": "Las letras del Tesoro se pagan a su valor al vencimiento: en una crisis el efectivo no cae de pico a valle.",
+          "en": "Treasury bills are paid at face value at maturity: in a crisis, cash doesn't fall peak to trough."
+        },
+        "source": {
+          "publisher": "U.S. Department of the Treasury",
+          "title": "Treasury Bills",
+          "url": "https://www.treasurydirect.gov/marketable-securities/treasury-bills/",
+          "scope": {
+            "es": "Letras del Tesoro de EE.UU.",
+            "en": "US Treasury bills."
+          },
+          "figure": 0,
+          "used": 0.0
+        }
+      }
+    }
+  },
+  "marketContext": [
+    {
+      "label": {
+        "es": "Bono del Tesoro de EE.UU. a 10 años: rendimiento",
+        "en": "10-year US Treasury note: yield"
+      },
+      "value": "5,05%",
+      "asOf": "2026-11-19",
+      "url": "https://tipswatch.com/2026/11/19/10-year-tips-auction-gets-real-yield-of-2-903-highest-in-24-years/"
+    },
+    {
+      "label": {
+        "es": "TIPS a 10 años (ajustado por inflación): rendimiento real en la subasta",
+        "en": "10-year TIPS (inflation-linked): real yield at auction"
+      },
+      "value": "2,903%",
+      "asOf": "2026-11-19",
+      "url": "https://tipswatch.com/2026/11/19/10-year-tips-auction-gets-real-yield-of-2-903-highest-in-24-years/"
+    }
+  ]
+}
